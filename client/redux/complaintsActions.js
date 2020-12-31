@@ -1,6 +1,6 @@
 import { SUCCESSFUL_GET_COMPLAINTS } from "./actionTypes/complaintsActionTypes";
 
-//data passed from getComplaints are passed in as complaints 
+ 
 export const successfulGetComplaints = (complaints) => {
   console.log(complaints);
   return {
@@ -9,7 +9,6 @@ export const successfulGetComplaints = (complaints) => {
   }
 };
 
-//getComplaints action will invoke another dispatch to succesfulGetComplaints with data retriveed from the backend
 export const getComplaints = () => {
   return dispatch => {
     fetch('/api/complaints')
